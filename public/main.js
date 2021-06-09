@@ -13,7 +13,7 @@ getJSON.onclick = () => {
 let n = 1
 getPage.onclick = () => {
   const request = new XMLHttpRequest()
-  request.open('GET', `/page${n+1}`)
+  request.open('GET', `./page${n+1}`)
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status >= 200 && request.status < 300) {
       const arr = JSON.parse(request.response)
@@ -30,7 +30,7 @@ getPage.onclick = () => {
 
 getCSS.onclick = () => {
   const request = new XMLHttpRequest()
-  request.open('GET', '/style.css')
+  request.open('GET', './style.css')
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status >= 200 && request.status < 300) {
       const style = document.createElement('style')
@@ -43,7 +43,7 @@ getCSS.onclick = () => {
 
 getJS.onclick = () => {
   const request = new XMLHttpRequest()
-  request.open('GET', '/2.js')
+  request.open('GET', './2.js')
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status >= 200 && request.status < 300) {
       const script = document.createElement('script')
@@ -56,7 +56,7 @@ getJS.onclick = () => {
 
 getHTML.onclick = () => {
   const request = new XMLHttpRequest()
-  request.open('GET', '/3.html')
+  request.open('GET', './3.html')
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status >= 200 && request.status < 300) {
       const div = document.createElement('div')
@@ -69,7 +69,7 @@ getHTML.onclick = () => {
 
 getXML.onclick = () => {
   const request = new XMLHttpRequest()
-  request.open('GET', '/4.xml')
+  request.open('GET', './4.xml')
   request.onreadystatechange = () => {
     if (request.readyState === 4 && request.status >= 200 && request.status < 300) {
       const div = document.createElement('div')
